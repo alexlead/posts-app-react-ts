@@ -1,0 +1,142 @@
+// https://huemint.com/bootstrap-plus/#palette=dde8ff-ffffff-2e1131-314163-0076bc-00a1fc-2a2547-1b50a2-95acec
+    // https://huemint.com/bootstrap-plus/
+@use "sass:map";
+
+$white: #ffffff;
+
+$theme-colors: (
+    "light":      #b7e7e7,
+    "dark":       #000f36,
+    "primary":    #06456b,
+    "secondary":  #37628f,
+    "info":       #4b8f9d,
+    "accent1":    #f5cfa7,
+    "accent2":    #299dd5,
+    "accent3":    #8cb8cd,
+    "success":    #0bb564,
+    "warning":    #eacf09,
+    "danger":     #fd0303,
+);
+
+*{
+    box-sizing: border-box;
+    }
+
+body{
+    
+    background: map.get($theme-colors, "light");
+
+        margin: 0;
+        padding: 0;
+
+    .container{
+        
+        // width: 100%;
+        max-width: 1200px;
+        margin: 0 auto 5px;
+        }
+
+    .App{
+        margin: 0;
+        padding: 0;
+            width: 100%;
+        
+        footer{
+                    margin: 0;
+            padding: 10px ;
+            width: 100%;
+            color: $white;
+            background: map.get($theme-colors, 'dark');
+            }
+        header{
+            margin: 0;
+            padding: 10px ;
+            width: 100%;
+            color: $white;
+            background: map.get($theme-colors, 'dark');
+            position: sticky;
+            top: 0;
+            
+            a{
+            color: $white;
+            text-decoration: none;
+                }
+
+            .container{
+                
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .logo{
+                    
+                    display: flex;
+                    align-items: center;
+                    &__image{
+                        display: grid;
+                        background: $white;
+                        padding: 10px;
+                        border-radius: 50%;
+                        grid-auto-columns: 1fr;
+                        grid-auto-rows: 1fr;
+                        grid-template-columns: 1fr 1fr ;
+                        gap: 3px;
+                        margin-right: 15px; 
+                        transform: rotateZ(67deg);
+                        span{
+                            width: 15px;
+                            height: 15px;
+                            background: map.get($theme-colors, "dark" );
+                        &:nth-child(1) {
+                            transform: skew(10deg, 10deg);
+                            
+                            }
+                            
+                            }
+                        
+                        }
+                    &__text{
+                        font-size: 25px;
+                        font-style: italic;
+                        &::first-letter
+                            {
+                        font-size: 35px;
+                        font-style: normal;
+                                
+                                }
+                        }
+
+                    }
+
+                    nav{
+                        
+                        ul{
+                            list-style: none;
+                            display: flex;
+                            li{
+                                margin-left: 2px;
+
+                                a{
+                                    display: block;
+                                    padding: 5px 10px;
+                                    font-size: 20px;
+                                    }
+
+
+                                }
+                            }
+                        
+                        }
+
+                }
+            
+    
+
+            }
+        .content{
+            min-height: calc( 100vH - 120px  );
+            display: flex;
+            }
+        
+        }
+    }
