@@ -1,4 +1,5 @@
 import React from 'react'
+import Navigation from './Navigation'
 
 const Header = () => {
   return (
@@ -19,12 +20,7 @@ const Header = () => {
                 </div>
             </div>
             <nav>
-                <ul className="menu">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/posts">Blog</a></li>
-                    <li><a href="/todo">Schedule</a></li>
-                    <li><a href="/authors">Authors</a></li>
-                </ul>
+                <Navigation/>
             </nav>
 
         </div>
