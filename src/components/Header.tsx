@@ -12,7 +12,9 @@ const Header = () => {
                     <span></span>
                 </div>
                 <div className="logo__text">
+            <a href="/">
                 React Routing
+                </a>
 
                 </div>
             </div>
@@ -20,6 +22,7 @@ const Header = () => {
                 <ul className="menu">
                     <li><a href="/">Home</a></li>
                     <li><a href="/posts">Blog</a></li>
+                    <li><a href="/todo">Schedule</a></li>
                     <li><a href="/authors">Authors</a></li>
                 </ul>
             </nav>

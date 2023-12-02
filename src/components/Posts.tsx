@@ -18,22 +18,25 @@ const Posts = () => {
     useEffect(() => {
       fetch("https://jsonplaceholder.typicode.com/posts")
       .then(response => response.json())
-      .then(json => setPostsList([...json]))
+      .then(json => setPostsList([...json.filter((item:any, index:number)=>index < 12)]))
     }, [])
     
 
   return (
-    <div>
+    <>
+    <h1>Blog</h1>
+    <div className="postList">
         {
-            postsList && 
-            postsList.map( (item, index) => ( 
-                <Post key={index} post={item} />
-             ) )
-
-        }
+          postsList && 
+          postsList.map( (item, index) => ( 
+            <Post key={index} post={item} />
+            ) )
+            
+          }
 
 
     </div>
+          </>
   )
 }
 

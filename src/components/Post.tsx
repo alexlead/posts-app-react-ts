@@ -8,9 +8,15 @@ interface IPost {
 
 const Post = ( {post}:IPost) => {
   return (
-    <div>
+    <div className="postItem">
+        <div className="postItem__thumbnail">
+          
+        </div>
+        <div className="postItem__body">
         <h2>{post.title}</h2>
-        <div>{post.body}</div>
+        <div>{post.body.substring(0, 40) + "..."}</div>
+        </div>
+        <div className="postItem__footer"><a href={"/posts/"+post.id}>Read</a></div>
     </div>
   )
 }
